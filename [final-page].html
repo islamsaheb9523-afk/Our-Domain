@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Anime List - The End</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== EXISTING SOLAR SYSTEM STYLES (FIXED CENTER) ===== */
+    .solar-system-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0;
+      position: relative;
+      z-index: 2;
+    }
+    .solar-system {
+      font-size: 10px;
+      width: 40em;
+      height: 40em;
+      position: relative;
+      background: transparent;
+    }
+    .sun {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10em;
+      height: 10em;
+      background-color: #fbbf24;
+      border-radius: 50%;
+      box-shadow: 0 0 3em #f59e0b;
+      animation: pulse 2s infinite alternate;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 2em #f59e0b; transform: translate(-50%, -50%) scale(1); }
+      100% { box-shadow: 0 0 5em #f97316; transform: translate(-50%, -50%) scale(1.05); }
+    }
+    .earth {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 30em;
+      height: 30em;
+      margin-top: -15em;
+      margin-left: -15em;
+      border-style: solid;
+      border-color: #94a3b8 transparent transparent transparent;
+      border-width: 0.1em 0.1em 0 0;
+      border-radius: 50%;
+      animation: orbit 36.5s linear infinite;
+    }
+    .moon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 8em;
+      height: 8em;
+      border-style: solid;
+      border-color: #cbd5e1 transparent transparent transparent;
+      border-width: 0.1em 0.1em 0 0;
+      border-radius: 50%;
+      animation: orbit 2.7s linear infinite;
+    }
+    .earth::before {
+      content: '';
+      position: absolute;
+      top: 2.8em;
+      right: 2.8em;
+      width: 3em;
+      height: 3em;
+      background-color: #3b82f6;
+      border-radius: 50%;
+      box-shadow: 0 0 0.5em #60a5fa;
+    }
+    .moon::before {
+      content: '';
+      position: absolute;
+      top: 0.8em;
+      right: 0.2em;
+      width: 1.2em;
+      height: 1.2em;
+      background-color: #e2e8f0;
+      border-radius: 50%;
+    }
+    @keyframes orbit {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ===== NEW: FLOATING STARS BACKGROUND ===== */
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .star {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0;
+      animation: floatStar 8s linear infinite;
+    }
+    @keyframes floatStar {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% { opacity: 0.8; }
+      90% { opacity: 0.8; }
+      100% {
+        transform: translateY(-20vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* ===== NEW: GLOW TEXT & QUOTE ===== */
+    .end-quote {
+      text-align: center;
+      margin: 1rem 0 0rem;
+      font-size: 1.2rem;
+      color: #fbbf24;
+      text-shadow: 0 0 8px #f97316;
+      font-style: italic;
+    }
+    .sub-quote {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin-bottom: 1rem;
+    }
+
+    /* ===== NEW: RESTART BUTTON ===== */
+    .restart-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: white;
+      text-decoration: none;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .restart-button:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(135deg, #16a34a, #15803d);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    /* Responsive scale */
+    @media (max-width: 640px) {
+      .solar-system { transform: scale(0.7); }
+      .end-quote { font-size: 1rem; }
+    }
+    .bottom-line { margin: 2rem auto; width: 80%; border-color: #334155; }
+    .nav-button.disabled { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
+  </style>
+</head>
+<body class="dark-theme">
+  <!-- Floating stars background -->
+  <div class="stars" id="stars"></div>
+
+  <main class="container" style="position: relative; z-index: 2;">
+    <header class="page-header">
+      <h1 class="AnimeList">
+        <span class="TV">📺</span>
+        AnimeList
+      </h1>
+      <div class="end-quote">"Every anime ending is just a new beginning... to rewatch!" ✨</div>
+      <div class="sub-quote">Thanks for scrolling to the abyss.</div>
+    </header>
+
+    <div class="solar-system-wrapper">
+      <div class="solar-system">
+        <div class="sun"></div>
+        <div class="earth">
+          <div class="moon"></div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="bottom-line">
+
+    <div class="page-nav">
+      <a href="page3.html" class="nav-button">&laquo; Back</a>
+      <span class="page-indicator">THE END</span>
+      <a href="#" class="nav-button disabled">Next &raquo;</a>
+    </div>
+
+    <!-- Extra restart button -->
+    <div style="text-align: center; margin: 1rem 0 1.5rem;">
+      <a href="index.html" class="restart-button">⟳ Restart Journey</a>
+    </div>
+
+    <footer>
+      <p>📖 A curated anime list • Data of <strong>My Will</strong> • Images for Professional <strong>Vibes only</strong></p>
+      <p>⭐ Click any card link to <strong>download the series</strong> and to <em>waste your time</em></p>
+    </footer>
+  </main>
+
+  <script>
+    // Generate floating stars dynamically
+    const starsContainer = document.getElementById('stars');
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      const size = Math.random() * 3 + 1; // 1px to 4px
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.animationDuration = `${Math.random() * 8 + 4}s`; // 4-12s
+      star.style.animationDelay = `${Math.random() * 10}s`;
+      star.style.opacity = Math.random() * 0.7 + 0.3;
+      starsContainer.appendChild(star);
+    }
+  </script>
+</body>
+</html>
