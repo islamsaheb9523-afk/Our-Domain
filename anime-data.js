@@ -1,0 +1,33 @@
+// anime-data.js
+const animeDatabase = [
+  { id: "sentence-hero", title: "SENTENCED TO BE A HERO", year: "2025", genres: ["Dark Fantasy","Adventure","Action"], synopsis: "The story follows Xylo Forbartz...", page: "index.html" },
+  { id: "tokyo-ghoul", title: "TOKYO GHOUL", year: "2014", genres: ["Dark Fantasy","Horror","Action Thriller"], synopsis: "Just click the links below...", page: "index.html" },
+  { id: "baki-dou", title: "BAKI-DOU THE INVINCIBLE SAMURAI", year: "2026", genres: ["Action","Shounen","Sports"], synopsis: "Baki and the strongest...", page: "index.html" },
+  { id: "terror-resonance", title: "TERROR IN RESONANCE", year: "2014", genres: ["psychological thriller","suspense","mystery"], synopsis: "Tokyo has been decimated...", page: "index.html" },
+  { id: "million-lives", title: "I'M STANDING ON A MILLION LIVES", year: "2020", genres: ["dark fantasy","isekai","survival game"], synopsis: "Yuusuke Yotsuya...", page: "index.html" },
+  { id: "shield-hero", title: "The Rising of the Shield Hero", year: "2019", genres: ["Dark fantasy","Isekai"], synopsis: "A gamer is magically summoned...", page: "index.html" },
+  { id: "tojima-rider", title: "Tojima Wants to Be a Kamen Rider Season 1", year: "", genres: [], synopsis: "Tanzaburo Tojima...", page: "page2.html" },
+  { id: "shield-hero-s1", title: "The Rising of The Shield Hero Season 1", year: "2019", genres: ["Isekai","Fantasy"], synopsis: "When Naofumi Iwatani...", page: "page2.html" },
+  { id: "shield-hero-s2", title: "The Rising of The Shield Hero Season 2", year: "", genres: ["Isekai","Fantasy"], synopsis: "This is the second season...", page: "page2.html" },
+  { id: "pop-idol", title: "If My Favourite Pop Idol Make it to The Budokan I'd Die Season 1", year: "", genres: [], synopsis: "I don't think anybody...", page: "page2.html" },
+  { id: "mf-ghost", title: "MF Ghost Season 1", year: "", genres: [], synopsis: "Self-driving cars...", page: "page2.html" },
+  { id: "misanthrope", title: "A Misanthrope Teaches a Class For Demi-humans Season 1", year: "", genres: [], synopsis: "After a traumatic incident...", page: "page2.html" },
+  { id: "scarlet-movie", title: "Scarlet Movie", year: "", genres: [], synopsis: "A sword-wielding princess...", page: "page2.html" },
+  { id: "cute-girl-hero", title: "There Was a Cute Girl in The Hero's Party...Bla-Bla Season 1", year: "", genres: [], synopsis: "Reincarnated as a mid-tier demon...", page: "page2.html" },
+  { id: "kunon", title: "Kunon The Sorcerer Can See Season 1", year: "", genres: [], synopsis: "Kunon Gurion is a young man...", page: "page2.html" },
+  { id: "roll-over-die", title: "Roll Over And Die Season 1", year: "", genres: [], synopsis: "After being betrayed...", page: "page2.html" },
+  { id: "dark-moon", title: "Dark Moon: The Blood Altar Season 1", year: "", genres: [], synopsis: "Sooha's arrival at Decelis Academy...", page: "page3.html" },
+  { id: "dandelion", title: "Dandelion Season 1", year: "", genres: [], synopsis: "Follows two operatives...", page: "page3.html" },
+  { id: "bofuri-s1", title: "BOFURI - I Don't Want to Get Hurt so I'll Max Out My Defense Season 1", year: "", genres: [], synopsis: "A player designing a character...", page: "page3.html" },
+  { id: "bofuri-s2", title: "BOFURI - I Don't Want to Get Hurt so I'll...Bla Bla Season 2", year: "", genres: [], synopsis: "This is a second season...", page: "page3.html" },
+  { id: "gintama-p1", title: "Gintama Season 1 Part 1", year: "2003", genres: [], synopsis: "Gintama is a Japanese manga...", page: "page3.html" },
+  { id: "gintama-p2", title: "Gintama Season 1 Part 2", year: "2003", genres: [], synopsis: "This is the second part...", page: "page3.html" },
+  { id: "adventurer-grind", title: "An Adventurer’s Daily Grind at Age 29 Season 1", year: "", genres: [], synopsis: "Born and raised in the slums...", page: "page3.html" },
+  { id: "hana-kimi", title: "Hana Kimi Season 1", year: "", genres: [], synopsis: "Mizuki Ashiya is on a mission...", page: "page3.html" },
+  { id: "cells-at-work", title: "Cells at Work Season 1", year: "", genres: [], synopsis: "One newcomer red blood cell...", page: "page3.html" },
+  { id: "reborn-blade", title: "Reborn to Master the Blade Season 1", year: "2019", genres: [], synopsis: "Reborn to Master the Blade...", page: "page3.html" },
+  { id: "dr-stone", title: "DR. STONE", year: "2019", genres: ["Sci-Fi","Adventure","Shonen"], synopsis: "Senku Ishigami...", page: "page4.html" },
+  { id: "one-piece", title: "ONE PIECE", year: "2023", genres: ["Action","Adventure","Comedy","Drama","Fantasy"], synopsis: "Monkey D. Luffy...", page: "page4.html" },
+  { id: "frieren", title: "FRIEREN: BEYOND JOURNEY'S END", year: "2023", genres: ["Fantasy","Adventure","Drama"], synopsis: "Adventurers have defeated...", page: "page4.html" }
+];
+
