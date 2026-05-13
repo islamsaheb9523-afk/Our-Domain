@@ -12,6 +12,17 @@
   </head>
   <body class="dark-theme">
     <main class="container">
+      <!-- GLOBAL SEARCH -->
+      <div class="search-global-wrapper">
+        <div class="search-global-container">
+          <button class="search-icon-btn" aria-label="Search anime">🔍</button>
+          <div class="search-input-field">
+            <input type="text" id="globalSearchInput" placeholder="Search all anime..." autocomplete="off">
+            <button class="search-close" aria-label="Close">✖</button>
+          </div>
+        </div>
+      </div>
+      <div id="searchResultsPanel" class="search-results-panel"></div>
   
       <header class="page-header">
         <h1 class="AnimeList">
@@ -194,12 +205,6 @@
             </details>
           </div>
         </article>
-
-
-    
-    
-    
-    
       </div>
   
       <!--BOTTOM LINE-->

@@ -1,4 +1,4 @@
-// global-search.js (updated)
+// global-search.js (updated - shows only anime name + rating)
 document.addEventListener('DOMContentLoaded', function() {
   if (typeof Fuse === 'undefined') {
     const script = document.createElement('script');
@@ -77,18 +77,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function renderResults(results) {
       if (!results.length) {
-        resultsPanel.innerHTML = '<div class="no-results-panel">✨ No matches</div>';
+        resultsPanel.innerHTML = '<div class="no-results-panel">✨ No matches found</div>';
         resultsPanel.classList.add('show');
         return;
       }
+      
+      // Display ONLY anime name and rating (as requested)
       resultsPanel.innerHTML = results.map(res => {
         const anime = res.item;
-        const genresHtml = (anime.genres || []).map(g => `<span style="background:#2d3748; padding:2px 8px; border-radius:20px; font-size:0.7rem;">${escapeHtml(g)}</span>`).join(' ');
+        const rating = anime.rating || '⭐ ?/5';
         return `
           <div class="result-item" data-page="${anime.page}" data-id="${anime.id}">
             <div class="result-title">${escapeHtml(anime.title)}</div>
-            <div class="result-meta">📅 ${anime.year || '?'} • ${genresHtml}</div>
-            <div class="result-synopsis">${escapeHtml(anime.synopsis.substring(0, 100))}...</div>
+            <div class="result-rating">${escapeHtml(rating)}</div>
           </div>
         `;
       }).join('');
@@ -103,12 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
 
-    // CHANGED: use sessionStorage instead of URL hash
     function goToAnime(anime) {
       if (!anime || !anime.page) return;
-      // Store the target anime ID in sessionStorage
       sessionStorage.setItem('scrollToAnimeId', anime.id);
-      // Navigate to the page
       window.location.href = anime.page;
     }
 
