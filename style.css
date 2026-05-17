@@ -501,6 +501,23 @@ footer {
   }
 }
 
+@media only screen and (min-width: 455px){
+  .TV {
+  margin-top: -15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scaleX(2.75);
+  font-size: 5rem;
+  opacity: 0.30;
+  z-index: -1;
+  background: linear-gradient(90deg, #FF9933, #FF671F);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  }
+}
 /* ========== STICKY SEARCH (IMPROVED) ========== */
 .search-global-wrapper {
   position: sticky;
