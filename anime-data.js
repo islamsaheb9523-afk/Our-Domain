@@ -24,13 +24,10 @@ const animeDatabase = [
   { id: "cells-at-work", title: "Cells at work", year: "2018", genres: ["educational","comedy","action","sci-fi"], rating: "⭐ 4.7/5", synopsis: "One newcomer red blood cell just...", page: "page2.html"},
 // total-cards 20
 // page-3
+  { id: "dr-stone", title: "DR. STONE", year: "2019", genres: ["Sci-Fi","Adventure","Shonen"], rating: "⭐ 4.8/5", synopsis: "Senku Ishigami...", page: "page3.html" },
+  { id: "one-piece", title: "ONE PIECE", year: "2023", genres: ["Action","Adventure","Comedy","Drama","Fantasy"], rating: "⭐ 4.8/5", synopsis: "Monkey D. Luffy...", page: "page3.html" },
+  { id: "frieren", title: "FRIEREN: BEYOND JOURNEY'S END", year: "2023", genres: ["Fantasy","Adventure","Drama"], rating: "⭐ 4.9/5", synopsis: "Adventurers have defeated...", page: "page3.html" }
   { id: "dark-moon", title: "Dark Moon: The Blood Altar Season 1", year: "2024", genres: ["Vampire","Fantasy","Romance"], rating: "⭐ 4.4/5", synopsis: "Sooha's arrival at Decelis Academy...", page: "page3.html" },
-
-
   { id: "adventurer-grind", title: "An Adventurer’s Daily Grind at Age 29 Season 1", year: "2025", genres: ["Fantasy","Adventure","Slice of Life"], rating: "⭐ 4.2/5", synopsis: "Born and raised in the slums...", page: "page3.html" },
-  { id: "hana-kimi", title: "Hana Kimi Season 1", year: "2007", genres: ["Comedy","Romance","School"], rating: "⭐ 4.4/5", synopsis: "Mizuki Ashiya is on a mission...", page: "page3.html" },
-  
-  { id: "dr-stone", title: "DR. STONE", year: "2019", genres: ["Sci-Fi","Adventure","Shonen"], rating: "⭐ 4.8/5", synopsis: "Senku Ishigami...", page: "page4.html" },
-  { id: "one-piece", title: "ONE PIECE", year: "2023", genres: ["Action","Adventure","Comedy","Drama","Fantasy"], rating: "⭐ 4.8/5", synopsis: "Monkey D. Luffy...", page: "page4.html" },
-  { id: "frieren", title: "FRIEREN: BEYOND JOURNEY'S END", year: "2023", genres: ["Fantasy","Adventure","Drama"], rating: "⭐ 4.9/5", synopsis: "Adventurers have defeated...", page: "page4.html" }
+  { id: "hana-kimi", title: "Hana Kimi Season 1", year: "2007", genres: ["Comedy","Romance","School"], rating: "⭐ 4.4/5", synopsis: "Mizuki Ashiya is on a mission...", page: "page3.html" }
 ];
