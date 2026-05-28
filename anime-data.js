@@ -213,5 +213,29 @@ const animeDatabase = [
     genres: ["Shojo", "Rom-Com", "Slice of Life"],
     rating: "⭐ 4.6/5",
     page: "page3.html"
+  },
+  {
+    id: "elite-class",
+    title: "ClassRoom Of The Elite",
+    year: "2017",
+    genres: ["Drama", "Suspense", "Psychological"],
+    rating: "⭐ 4.8/5",
+    page: "page3.html"
+  },
+  {
+    id: "365-days",
+    title: "365 Days to the wedding",
+    year: "2024",
+    genres: ["slice-of-life", "comedy", "romance"],
+    rating: "⭐ 4.6/5",
+    page: "page3.html"
+  },
+  {
+    id: "sucide-sq",
+    title: "Suicide Squad Isekai",
+    year: "2024",
+    genres: ["Isekai", "comedy", "dark fantasy"],
+    rating: "⭐ 4.3/5",
+    page: "page3.html"
   }
 ];
