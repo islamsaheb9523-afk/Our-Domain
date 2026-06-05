@@ -237,5 +237,13 @@ const animeDatabase = [
     genres: ["Isekai", "comedy", "dark fantasy"],
     rating: "⭐ 4.3/5",
     page: "page3.html"
+  },
+  {
+    id: "wistoria",
+    title: "Wistoria: Wand and Sword",
+    year: "2024",
+    genres: ["Fantasy", "Action", "Shonen"],
+    rating: "⭐ 4.8/5",
+    page: "page3.html"
   }
 ];
